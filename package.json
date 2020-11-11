@@ -11,6 +11,10 @@
     "print",
     "print.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daizhen1995/el-printer.git"
+  },
   "scripts": {
     "build": "rollup -c build/rollup.config.dev.js",
     "build:prod": "rollup -c build/rollup.config.prod.js",

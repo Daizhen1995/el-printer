@@ -1,6 +1,6 @@
 {
   "name": "el-printer",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "html printer",
   "main": "dist/el-printer.js",
   "module": "dist/el-printer-es.js",

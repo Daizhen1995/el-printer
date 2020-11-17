@@ -1,7 +1,3 @@
-import 'core-js/stable/promise'
-import 'core-js/stable/array'
-import 'regenerator-runtime/runtime'
-
 const frameId = `zexPrintJS`
 
 export function print(printableElementOptions = [], zoom = 1) {

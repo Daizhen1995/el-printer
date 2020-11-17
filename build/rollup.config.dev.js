@@ -1,7 +1,7 @@
 import path from 'path'
-import commonjs from 'rollup-plugin-commonjs'
-import resolve from 'rollup-plugin-node-resolve'
-import babel from 'rollup-plugin-babel'
+import commonjs from '@rollup/plugin-commonjs'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import babel from '@rollup/plugin-babel'
 
 const inputPath = path.resolve(__dirname, '../src/index.js')
 
@@ -27,23 +27,11 @@ export default {
     },
   ],
   plugins: [
-    resolve(),
+    nodeResolve(),
+    commonjs(),
     babel({
       exclude: 'node_modules/**',
-      presets: [
-        [
-          '@babel/env',
-          {
-            modules: false,
-            targets: {
-              browsers: '> 1%, IE 11, not dead',
-            },
-            useBuiltIns: 'entry',
-            corejs: '3'
-          },
-        ],
-      ],
+      babelHelpers: 'runtime',
     }),
-    commonjs(),
   ],
 }
